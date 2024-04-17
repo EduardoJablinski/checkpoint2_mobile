@@ -6,19 +6,15 @@ import ListaTarefas from "./src/components/ListaTarefas";
 
 export default function App() {
   return (
-    
     <NativeBaseProvider>
       <ProvedorEstadoGlobal>
-        
         <View style={{ flex: 1 }}>
-          {/ Renderização do componente AdicionarTarefa /}
+          {/* Renderização do componente AdicionarTarefa */}
           <AdicionarTarefa />
-          {/ Renderização do componente ListaTarefas */}
+          {/* Renderização do componente ListaTarefas */}
           <ListaTarefas />
         </View>
-       
       </ProvedorEstadoGlobal>
     </NativeBaseProvider>
-
   );
 }

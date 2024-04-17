@@ -4,18 +4,12 @@ import { Ionicons } from '@expo/vector-icons';
 import { useEstadoGlobal } from "../hooks/EstadoGlobal";
 
 const AdicionarTarefa: React.FC = () => {
-  // Utiliza o hook useEstadoGlobal para acessar as funções do contexto global de estado
   const { adicionarTarefa } = useEstadoGlobal();
-  // Define um estado local para armazenar o valor da nova tarefa
   const [novaTarefa, setNovaTarefa] = useState("");
 
-  // Função chamada ao clicar no botão de adicionar tarefa
   const handleAdicionarTarefa = () => {
-    // Verifica se o campo de nova tarefa não está vazio
     if (novaTarefa.trim() !== "") {
-      // Chama a função adicionarTarefa do contexto global de estado para adicionar a nova tarefa
       adicionarTarefa(novaTarefa);
-      // Limpa o campo de nova tarefa após adicionar a tarefa
       setNovaTarefa("");
     }
   };
@@ -24,7 +18,6 @@ const AdicionarTarefa: React.FC = () => {
     <View style={{ backgroundColor: '#402291', paddingVertical: 20, paddingHorizontal: 20, paddingTop: 50 }}>
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
         <View style={{ flex: 1, marginRight: 10 }}>
-          {/* Campo de entrada para o usuário digitar o título da nova tarefa */}
           <Input
             placeholder="Digite uma tarefa"
             placeholderTextColor="white"
@@ -34,7 +27,6 @@ const AdicionarTarefa: React.FC = () => {
             color="white"
           />
         </View>
-        {/* Botão de adicionar tarefa */}
         <IconButton
           icon={<Ionicons name="add" size={24} color="#402291" />}
           colorScheme="light"
