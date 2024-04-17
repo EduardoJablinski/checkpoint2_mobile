@@ -9,6 +9,13 @@ export default function App() {
     
     <NativeBaseProvider>
       <ProvedorEstadoGlobal>
+        
+        <View style={{ flex: 1 }}>
+          {/ Renderização do componente AdicionarTarefa /}
+          <AdicionarTarefa />
+          {/ Renderização do componente ListaTarefas */}
+          <ListaTarefas />
+        </View>
        
       </ProvedorEstadoGlobal>
     </NativeBaseProvider>
